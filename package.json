@@ -84,7 +84,9 @@
     "test:live:mutation": "vitest run test/live/public-account-mutation.test.ts",
     "test:cov": "vitest run --coverage test/unit test/integration",
     "api-surface:update": "UPDATE_API_SNAPSHOT=1 vitest run test/integration/api-surface.test.ts",
-    "typecheck": "tsc --noEmit -p tsconfig.json && tsc -p tsconfig.test.json"
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc -p tsconfig.test.json",
+    "web": "npm run build && node dist/web/server.js",
+    "web:dev": "npm run build && node dist/web/server.js"
   },
   "dependencies": {
     "@teng-lin/agent-fetch": "^0.1.6",
